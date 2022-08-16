@@ -1,0 +1,23 @@
+.button {
+  height: fit-content;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.primary {
+  background-color: #1d1f21;
+  color: #fff;
+}
+
+.primary:hover {
+  background-color: rgb(41, 43, 46);
+}
+
+.secondary {
+  background-color: #fff;
+  color: #1d1f21;
+}
+
+.secondary:hover {
+  background-color: rgb(226, 226, 226);
+}
