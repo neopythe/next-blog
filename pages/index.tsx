@@ -7,7 +7,7 @@ import Layout from '../components/layout'
 
 import styles from '../styles/Home.module.css'
 
-const Page: NextPageWithLayout = () => {
+const Home: NextPageWithLayout = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -59,8 +59,8 @@ const Page: NextPageWithLayout = () => {
   )
 }
 
-export default Page
+export default Home
 
-Page.getLayout = function getLayout(page: ReactElement) {
+Home.getLayout = function getLayout(page: ReactElement) {
   return <Layout>{page}</Layout>
 }
