@@ -1,19 +1,13 @@
-import type { NextPage } from 'next'
-import { useRouter } from 'next/router'
-import { signOut, useSession } from 'next-auth/react'
+import type { ReactElement } from 'react'
+import type { NextPageWithLayout } from './_app'
 
 import Head from 'next/head'
-import Image from 'next/image'
 
-import LoginButton from '../components/login-button'
+import Layout from '../components/layout'
 
 import styles from '../styles/Home.module.css'
 
-const Home: NextPage = () => {
-  // `session` will match the returned value of `callbacks.session()` from `NextAuth()`
-  const { data: session } = useSession()
-  const router = useRouter()
-
+const Page: NextPageWithLayout = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -22,7 +16,6 @@ const Home: NextPage = () => {
       </Head>
 
       <main className={styles.main}>
-        <LoginButton />
         <h1 className={styles.title}>
           Welcome to <a href="https://nextjs.org">Next.js!</a>
         </h1>
@@ -66,4 +59,8 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home
+export default Page
+
+Page.getLayout = function getLayout(page: ReactElement) {
+  return <Layout>{page}</Layout>
+}
