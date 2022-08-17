@@ -5,7 +5,7 @@ import { SessionProvider } from 'next-auth/react'
 
 import '../styles/globals.css'
 
-export type NextPageWithLayout = NextPage & {
+export type NextPageWithLayout<props = {}> = NextPage<props> & {
   getLayout?: (page: ReactElement) => ReactNode
 }
 
