@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 import ActionButton from './action-button'
 
-export default function LoginButton() {
+export default function AuthButton() {
   const { data: session } = useSession()
   if (session) {
     return (
