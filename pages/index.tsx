@@ -37,20 +37,19 @@ const Home: NextPageWithLayout<HomeProps> = ({ posts }: HomeProps) => {
       </Head>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>Next Blog</h1>
-
-        {!session && (
-          <p className={styles.description}>Sign in to get started</p>
-        )}
-
-        <div className={styles.grid}>
-          {posts.map((post) => (
-            <div key={post.id} className={styles.card}>
-              <h2>{post.title}</h2>
-              <p>{post.content}</p>
-            </div>
-          ))}
-        </div>
+        <h1 className={styles.title}>
+          <span>Next</span> Blog
+        </h1>
+        <section>
+          <div className={styles.grid}>
+            {posts.map((post) => (
+              <div key={post.id} className={styles.card}>
+                <h2>{post.title}</h2>
+                <p>{post.content.replace(/^(.{100}[^\s]*).*/, '$1')}&hellip;</p>
+              </div>
+            ))}
+          </div>
+        </section>
       </main>
     </div>
   )
