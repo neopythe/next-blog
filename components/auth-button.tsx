@@ -15,8 +15,8 @@ export default function AuthButton() {
   }
   return (
     <div className="flex gap-4">
-      <ActionButton onClick={() => signIn()} style="secondary">
-        Sign in
+      <ActionButton style="secondary">
+        <Link href="/api/auth/signin">Sign in</Link>
       </ActionButton>
       <ActionButton style="primary">
         <Link href="/register">Register</Link>
