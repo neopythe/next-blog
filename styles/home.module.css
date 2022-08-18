@@ -106,7 +106,7 @@
 
 .card p {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: 0.9rem;
   line-height: 1.5;
 }
 
@@ -119,5 +119,11 @@
   .grid {
     width: 100%;
     flex-direction: column;
+  }
+
+  .card {
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
