@@ -7,6 +7,7 @@ import { Post } from '@prisma/client'
 
 import Head from 'next/head'
 
+import Date from '../components/date'
 import Layout from '../components/layout'
 
 import styles from '../styles/home.module.css'
@@ -28,7 +29,6 @@ interface HomeProps {
 
 const Home: NextPageWithLayout<HomeProps> = ({ posts }: HomeProps) => {
   const { data: session } = useSession()
-  console.log(posts)
   return (
     <div className={styles.container}>
       <Head>
@@ -45,6 +45,7 @@ const Home: NextPageWithLayout<HomeProps> = ({ posts }: HomeProps) => {
             {posts.map((post) => (
               <div key={post.id} className={styles.card}>
                 <h2>{post.title}</h2>
+                <Date date={post.date} />
                 <p>{post.content.replace(/^(.{100}[^\s]*).*/, '$1')}&hellip;</p>
               </div>
             ))}
