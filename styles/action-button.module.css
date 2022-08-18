@@ -10,7 +10,7 @@
 }
 
 .primary:hover {
-  background-color: #1d1f21;
+  background-color: #292b2e;
 }
 
 .secondary {
@@ -19,5 +19,5 @@
 }
 
 .secondary:hover {
-  background-color: #fff;
+  background-color: #e2e2e2;
 }
